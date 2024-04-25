@@ -14,6 +14,8 @@
 		CE554D9B2BD8B34E00DB96A9 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = CE554D9A2BD8B34E00DB96A9 /* GoogleGenerativeAI */; };
 		CE554D9F2BD8B3D800DB96A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554D9E2BD8B3D800DB96A9 /* Constants.swift */; };
 		CE554DA12BD8B54000DB96A9 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554DA02BD8B54000DB96A9 /* Place.swift */; };
+		CE554DA42BD8B7E300DB96A9 /* PlaceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554DA32BD8B7E300DB96A9 /* PlaceVM.swift */; };
+		CE554DA62BD8BA5C00DB96A9 /* PlaceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554DA52BD8BA5C00DB96A9 /* PlaceRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		CE554D8F2BD8B20900DB96A9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE554D9E2BD8B3D800DB96A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		CE554DA02BD8B54000DB96A9 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		CE554DA32BD8B7E300DB96A9 /* PlaceVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceVM.swift; sourceTree = "<group>"; };
+		CE554DA52BD8BA5C00DB96A9 /* PlaceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 		CE554D872BD8B20800DB96A9 /* PlacesAI */ = {
 			isa = PBXGroup;
 			children = (
+				CE554DA22BD8B7D200DB96A9 /* ViewModel */,
 				CE554D9D2BD8B3BE00DB96A9 /* Model */,
 				CE554D962BD8B20D00DB96A9 /* App */,
 				CE554D972BD8B21100DB96A9 /* View */,
@@ -86,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				CE554D8A2BD8B20800DB96A9 /* ContentView.swift */,
+				CE554DA52BD8BA5C00DB96A9 /* PlaceRow.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +111,14 @@
 				CE554DA02BD8B54000DB96A9 /* Place.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CE554DA22BD8B7D200DB96A9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE554DA32BD8B7E300DB96A9 /* PlaceVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,9 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE554DA62BD8BA5C00DB96A9 /* PlaceRow.swift in Sources */,
 				CE554D8B2BD8B20800DB96A9 /* ContentView.swift in Sources */,
 				CE554D892BD8B20800DB96A9 /* PlacesAIApp.swift in Sources */,
 				CE554D9F2BD8B3D800DB96A9 /* Constants.swift in Sources */,
+				CE554DA42BD8B7E300DB96A9 /* PlaceVM.swift in Sources */,
 				CE554DA12BD8B54000DB96A9 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
