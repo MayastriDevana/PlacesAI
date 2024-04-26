@@ -17,12 +17,20 @@ struct ContentView: View {
                     item in PlaceRow(place: item)
                 }
             }
-            .navigationTitle("Semarang")
+            .navigationTitle("Palembang")
             .overlay{
                 placeVM.place.isEmpty ? ProgressView() : nil
             }
-            .task {
-                await placeVM.getPlaces()
+//            .task {
+//                await placeVM.getPlaces()
+//            }
+            .onChange(of: placeVM.isReady) {
+                oldValue, isReady in
+                if isReady {
+                    Task{
+                        await placeVM.getPlaces()
+                    }
+                }
             }
         }
     }

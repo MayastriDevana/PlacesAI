@@ -11,6 +11,7 @@ import GoogleGenerativeAI
 class PlaceVM: ObservableObject{
     private var geminiModel: GenerativeModel?
     @Published var place: [Place] = []
+    @Published var isReady: Bool = false
     
     init() {
 //        self.geminiModel = GenerativeModel(name: "gemini-pro", apiKey: Constants.apiKey)
@@ -22,6 +23,7 @@ class PlaceVM: ObservableObject{
             do{
                 let apiKey: String = try await RemoteConfigService.shared.fetchConfig(forKey: .apiKey)
                 self.geminiModel = GenerativeModel(name: "gemini-pro", apiKey: apiKey)
+                self.isReady = true
             }catch{
                 print("Error configuring GenerativeModel: \(error)")
                 
