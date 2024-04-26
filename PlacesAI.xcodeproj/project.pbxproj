@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE445A952BDB5EDB004AC738 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = CE445A942BDB5EDB004AC738 /* FirebaseRemoteConfig */; };
+		CE445A972BDB5EDB004AC738 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CE445A962BDB5EDB004AC738 /* FirebaseRemoteConfigSwift */; };
+		CE445A9A2BDB6089004AC738 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE445A992BDB6089004AC738 /* GoogleService-Info.plist */; };
+		CE445A9D2BDB616E004AC738 /* RemoteConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE445A9C2BDB616E004AC738 /* RemoteConfigService.swift */; };
 		CE554D892BD8B20800DB96A9 /* PlacesAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554D882BD8B20800DB96A9 /* PlacesAIApp.swift */; };
 		CE554D8B2BD8B20800DB96A9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE554D8A2BD8B20800DB96A9 /* ContentView.swift */; };
 		CE554D8D2BD8B20900DB96A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE554D8C2BD8B20900DB96A9 /* Assets.xcassets */; };
@@ -19,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE445A992BDB6089004AC738 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CE445A9C2BDB616E004AC738 /* RemoteConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteConfigService.swift; sourceTree = "<group>"; };
 		CE554D852BD8B20800DB96A9 /* PlacesAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE554D882BD8B20800DB96A9 /* PlacesAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesAIApp.swift; sourceTree = "<group>"; };
 		CE554D8A2BD8B20800DB96A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,18 +41,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE445A972BDB5EDB004AC738 /* FirebaseRemoteConfigSwift in Frameworks */,
 				CE554D9B2BD8B34E00DB96A9 /* GoogleGenerativeAI in Frameworks */,
+				CE445A952BDB5EDB004AC738 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE445A932BDB5EDB004AC738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE445A9B2BDB614A004AC738 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CE445A9C2BDB616E004AC738 /* RemoteConfigService.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		CE554D7C2BD8B20800DB96A9 = {
 			isa = PBXGroup;
 			children = (
 				CE554D872BD8B20800DB96A9 /* PlacesAI */,
 				CE554D862BD8B20800DB96A9 /* Products */,
+				CE445A932BDB5EDB004AC738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,6 +85,8 @@
 		CE554D872BD8B20800DB96A9 /* PlacesAI */ = {
 			isa = PBXGroup;
 			children = (
+				CE445A9B2BDB614A004AC738 /* Config */,
+				CE445A992BDB6089004AC738 /* GoogleService-Info.plist */,
 				CE554DA22BD8B7D200DB96A9 /* ViewModel */,
 				CE554D9D2BD8B3BE00DB96A9 /* Model */,
 				CE554D962BD8B20D00DB96A9 /* App */,
@@ -139,6 +165,8 @@
 			name = PlacesAI;
 			packageProductDependencies = (
 				CE554D9A2BD8B34E00DB96A9 /* GoogleGenerativeAI */,
+				CE445A942BDB5EDB004AC738 /* FirebaseRemoteConfig */,
+				CE445A962BDB5EDB004AC738 /* FirebaseRemoteConfigSwift */,
 			);
 			productName = PlacesAI;
 			productReference = CE554D852BD8B20800DB96A9 /* PlacesAI.app */;
@@ -170,6 +198,7 @@
 			mainGroup = CE554D7C2BD8B20800DB96A9;
 			packageReferences = (
 				CE554D992BD8B34E00DB96A9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+				CE445A922BDB5D61004AC738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = CE554D862BD8B20800DB96A9 /* Products */;
 			projectDirPath = "";
@@ -187,6 +216,7 @@
 			files = (
 				CE554D902BD8B20900DB96A9 /* Preview Assets.xcassets in Resources */,
 				CE554D8D2BD8B20900DB96A9 /* Assets.xcassets in Resources */,
+				CE445A9A2BDB6089004AC738 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +233,7 @@
 				CE554D9F2BD8B3D800DB96A9 /* Constants.swift in Sources */,
 				CE554DA42BD8B7E300DB96A9 /* PlaceVM.swift in Sources */,
 				CE554DA12BD8B54000DB96A9 /* Place.swift in Sources */,
+				CE445A9D2BDB616E004AC738 /* RemoteConfigService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +439,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		CE445A922BDB5D61004AC738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.24.0;
+			};
+		};
 		CE554D992BD8B34E00DB96A9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google-gemini/generative-ai-swift.git";
@@ -419,6 +458,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		CE445A942BDB5EDB004AC738 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE445A922BDB5D61004AC738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		CE445A962BDB5EDB004AC738 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE445A922BDB5D61004AC738 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
 		CE554D9A2BD8B34E00DB96A9 /* GoogleGenerativeAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CE554D992BD8B34E00DB96A9 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;

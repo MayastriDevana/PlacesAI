@@ -8,7 +8,7 @@
 import Foundation
 
 struct Constants {
-    static let apiKey = "AIzaSyCsMYZQFsDXjV7X8WYjZ9-NYEda7eovMqQ"
+    static let apiKey = ""
     static let prompt = """
     give me inspiration for activities that can be done during the day in the city of Palembang. Provide the response as an array of JSON as
     {
